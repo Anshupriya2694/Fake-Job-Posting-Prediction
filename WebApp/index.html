@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fake Job Posting Predictor</title>
+    <meta name="description" content="Fake Job Posting Predictor">
+    <meta name="Anshupriya" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<script>
+    "use strict";
+    function submitForm(oFormElement) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            var result = parseFloat(xhr.responseText);
+            var resultElement = document.getElementById('result');
+            if (result == 0) {
+                resultElement.className = 'bg-danger';
+                resultElement.innerHTML = 'Your review was NEGATIVE!';
+            } else {
+                resultElement.className = 'bg-success';
+                resultElement.innerHTML = 'Your review was POSITIVE!';
+            }
+        }
+        xhr.open(oFormElement.method, oFormElement.action, true);
+        var review = document.getElementById('review');
+        xhr.send(review.value);
+        return false;
+    }
+</script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Is the job posting real, or fake?</h1>
+        <p>Enter a text version of the job posting below and click submit to find out...</p>
+        <form method="POST" action="**REPLACE WITH PUBLIC API URL**" onsubmit="return submitForm(this);">
+            <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+            <div class="form-group">
+                <label for="title">Job Title:</label>
+                <textarea class="form-control" rows="1" id="title">Job Title</textarea>
+                <label for="location">Job Location:</label>
+                <textarea class="form-control" rows="1" id="location">Job Location</textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <h1 class="bg-success" id="result"></h1>
+    </div>
+</body>
+
+</html>
