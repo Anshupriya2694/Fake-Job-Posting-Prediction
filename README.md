@@ -2,4 +2,5 @@
 
 ## Data
 
-The dataset for this project has been extracted from derived from Kaggle.
+The dataset for this project is avaiable at [Kaggle](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction). The dataset has 17880 observations and 18 features. These features are - 
+
