@@ -43,7 +43,7 @@ From the plot it can be seen that Houston, TX has the very high fake to real job
 
 3. Employment_type based real vs fake job distribution:
 
-![Distribution of fake and real jobs based on employment type](Images/employment-type-countplot)
+![Distribution of fake and real jobs based on employment type](Images/employment-type-countplot.png)
 
 Most fraudulent offers arise in a situation when the type to job offered is full time.
 
@@ -54,7 +54,7 @@ Other analysis:
 
 To enhance the results of this analysis, I created a fraud to real ratio for different locations. Based on the ratio a countplot is designed to view places with very high ratios. 
 
-![Fake to real ratio](Images/fake-to-real-ratio)
+![Fake to real ratio](Images/fake-to-real-ratio.png)
 
 Some places like Bakersfield, CA and Dallas, Texas have a very high fake to realy job ratio. Location seems to be a very importanr factor in evaluating fake jobs. 
 Two other features - telecommuting and has_company_logo had some kind of relationship with fake jobs as well. 58.6% of fradualent jobs have both these feature values equal to 0.
