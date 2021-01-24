@@ -15,6 +15,7 @@ This project uses data from [Kaggle](https://www.kaggle.com/shivamb/real-or-fake
 The follwing metrics have been used to evaluate the project:
 
 [1] Accuracy
+
 [2] F1-score
 
 ## Analysis
@@ -83,6 +84,7 @@ Using python's natural language processing package - nltk the next steps are pef
 The new and clean dataset is used for creating the final models. The. X and y variables are separated. 
 
 X: telecommuting, has_company_logo, has_questions, ratio, text, character_count
+
 y: fraudulent
 
 This dataset is split into test-train datasets using sci-kit learn's train_test_split method. The test set is one-third of the entire dataset. Using CountVectorizer from sci-kit learn the text data from X is converted to a count matrix which will be used in the **baseline** model - Naive Bayes. The accuarcy of this calssifier is 0.971. 
