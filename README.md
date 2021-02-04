@@ -148,7 +148,7 @@ The benchmark model for this project is Naïve bayes. The overall accuracy of th
 
 The following steps are taken for text processing:
 
-![Text Processing](Images\preprocessing_steps.png)
+![Text Processing](Images/preprocessing_steps.png)
 
 -	Tokenization: The textual data is split into smaller units. In this case the data is split into words.
 -	To Lower: The split words are converted to lowercase
